@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "pages#home"
   # Статические страниц
   get   "about" => "pages#about"
+  get   "pages/ilorem"
   match "pages/:slug" => "pages#page", as: "page", via: [:get, :post]
 
   # Добавляем роуты с помощью метода devise_for от гема device.
