@@ -1,0 +1,9 @@
+<h1>ActionCable#show</h1>
+
+<div id="action_cable_show" data-room_id="1">
+</div>
+
+<%= form_tag action_cable_show_path, method: :post do %>
+  <%= button_tag 'Отправть в 1', :name => :submit, :type => :submit, value: 1 %>
+  <%= button_tag 'Отправть в 2', :name => :submit, :type => :submit, value: 2 %>
+<% end %>
