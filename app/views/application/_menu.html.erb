@@ -1,8 +1,19 @@
 <ul>
   <li><%= link_to 'Home', root_path %></li>
-  <li><%= link_to 'About', about_path %></li>
-  <li><%= link_to 'ILorem', pages_ilorem_path %></li>
-  <li><%= link_to 'Some Page', page_path('some_slug') %></li>
+  <li>Pages
+    <ul>
+      <li><%= link_to 'About', about_path %></li>
+      <li><%= link_to 'ILorem', pages_ilorem_path %></li>
+      <li><%= link_to 'Some Page', page_path('some_slug') %></li>
+    </ul>
+  </li>
+  <li>ActionCable
+    <ul>
+      <li><%= link_to 'ActionCable/show', action_cable_show_path %></li>
+      <li><%= link_to 'ActionCable/room1', action_cable_room_path(1) %></li>
+      <li><%= link_to 'ActionCable/room2', action_cable_room_path(2) %></li>
+    </ul>
+  </li>
 </ul>
 
 <ul>

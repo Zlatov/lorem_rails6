@@ -62,5 +62,11 @@ gem 'dotenv-rails', groups: [:development, :test, :production]
 # СУБД.
 gem 'pg'
 
-# Аутентификация
+# Аутентификация.
 gem 'devise'
+
+# РСУБД.
+gem 'redis'
+
+# Альтернатива для rails console > irb, с историей…
+gem 'pry-rails'

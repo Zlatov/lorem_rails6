@@ -18,4 +18,8 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     unlocks: 'users/unlocks',
   }
+
+  # Изучение ActionCable
+  match 'action_cable/show', via: [:get, :post]
+  get   'action_cable/room/:id' => 'action_cable#room', as: 'action_cable_room'
 end
