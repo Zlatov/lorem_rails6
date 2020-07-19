@@ -2,6 +2,10 @@ require_relative 'boot'
 
 require 'rails/all'
 
+# Подключение гема dotenv-rails
+require 'dotenv'
+Dotenv.load('variables.env')
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)

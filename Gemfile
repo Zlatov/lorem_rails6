@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Цветной текст консоли.
 gem 'awesome_print'
+
+# Для формирования переменных среды.
+gem 'dotenv-rails', groups: [:development, :test, :production]
