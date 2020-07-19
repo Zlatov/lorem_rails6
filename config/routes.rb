@@ -6,4 +6,15 @@ Rails.application.routes.draw do
   # Статические страниц
   get   "about" => "pages#about"
   match "pages/:slug" => "pages#page", as: "page", via: [:get, :post]
+
+  # Добавляем роуты с помощью метода devise_for от гема device.
+  # devise_for :users
+  # Для расширения поведений контроллеров сгенерируем их и укажем в опциях:
+  devise_for :users, controllers: {
+    confirmations: 'users/confirmations',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    unlocks: 'users/unlocks',
+  }
 end

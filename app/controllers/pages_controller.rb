@@ -21,7 +21,7 @@ class PagesController < ApplicationController
     when 'home'
       'home'
     else
-      'page'
+      'application'
     end
   end
 end

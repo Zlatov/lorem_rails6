@@ -109,4 +109,17 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  # Для режима продакшн рекомендуется создавать белый список доменов.
+  # config.hosts.clear
+  config.hosts.push *ENV['HOSTS'].split("\s")
+
+  # Гем device требует для отправки писем определиться с доменом
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Настройка smtp
+  config.action_mailer.smtp_settings = {
+    :address => '127.0.0.1',
+    :port => 1025
+  }
 end

@@ -61,3 +61,6 @@ gem 'dotenv-rails', groups: [:development, :test, :production]
 
 # СУБД.
 gem 'pg'
+
+# Аутентификация
+gem 'devise'
