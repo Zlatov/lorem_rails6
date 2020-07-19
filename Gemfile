@@ -58,3 +58,6 @@ gem 'awesome_print'
 
 # Для формирования переменных среды.
 gem 'dotenv-rails', groups: [:development, :test, :production]
+
+# СУБД.
+gem 'pg'
