@@ -1,25 +1,23 @@
-<ul>
+<ul class="imenu horisonatal">
   <li><%= link_to 'Home', root_path %></li>
-  <li>Pages
+  <li><span>Pages</span>
     <ul>
       <li><%= link_to 'About', about_path %></li>
       <li><%= link_to 'ILorem', pages_ilorem_path %></li>
       <li><%= link_to 'Some Page', page_path('some_slug') %></li>
     </ul>
+    <i></i>
   </li>
-  <li>ActionCable
+  <li><span>ActionCable</span>
     <ul>
       <li><%= link_to 'ActionCable/show', action_cable_show_path %></li>
       <li><%= link_to 'ActionCable/room1', action_cable_room_path(1) %></li>
       <li><%= link_to 'ActionCable/room2', action_cable_room_path(2) %></li>
     </ul>
+    <i></i>
   </li>
-</ul>
-
-<ul>
   <% if user_signed_in? %>
-    <li><%= current_user.email %></li>
-    <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to "Sign out (#{current_user.email})", destroy_user_session_path, method: :delete %></li>
   <% else %>
     <li><%= link_to "Sign in", new_user_session_path %></li>
     <li><%= link_to "Sign up", new_user_registration_path %></li>
